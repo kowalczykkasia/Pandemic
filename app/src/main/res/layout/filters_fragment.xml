@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:backgroundTint="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.FiltersFragment">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/gradient_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvFilters"
+        android:layout_width="154dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="@string/Filters"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvShowOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="23dp"
+        android:text="@string/show_only"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBack" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ltShow"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="23dp"
+        android:paddingHorizontal="3dp"
+        android:textSize="13sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvShowOnly">
+    <Button
+        android:id="@+id/btnAll"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:paddingHorizontal="5dp"
+        android:background="@drawable/basic_button_shape"
+        android:text="@string/All"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+        android:id="@+id/btnConfirmed"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:paddingHorizontal="5dp"
+        android:background="@drawable/basic_button_shape"
+        android:text="@string/Confirmed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnAll"
+        app:layout_constraintEnd_toStartOf="@id/btnSelfReported"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+        android:id="@+id/btnSelfReported"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:paddingHorizontal="5dp"
+        android:background="@drawable/basic_button_shape"
+        android:text="@string/Self_reported"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvAdded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="23dp"
+            android:text="@string/added"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ltShow" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ltAdded"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="23dp"
+        android:paddingHorizontal="3dp"
+        android:textSize="13sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAdded">
+        <Button
+            android:id="@+id/btnFromDate"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingHorizontal="5dp"
+            android:background="@drawable/basic_button_shape"
+            tools:text="From 17.11.2019"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <Button
+            android:id="@+id/btnFor24"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingHorizontal="5dp"
+            android:background="@drawable/basic_button_shape"
+            android:text="@string/for24"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnFromDate"
+            app:layout_constraintEnd_toStartOf="@id/btnFor2Weeks"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <Button
+            android:id="@+id/btnFor2Weeks"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingHorizontal="5dp"
+            android:background="@drawable/basic_button_shape"
+            android:text="@string/for2Weeks"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

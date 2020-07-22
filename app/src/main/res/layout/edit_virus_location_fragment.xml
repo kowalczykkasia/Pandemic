@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.EditVirusLocationFragment">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mvMap"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"/>
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/gradient_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMapTitle"
+        android:layout_width="154dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="@string/reportVirus"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvMapTitle"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/background"
+        android:backgroundTint="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mvMap">
+
+        <TextView
+            android:id="@+id/tvSetLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/setLocation"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bottomBar" />
+
+        <TextView
+            android:id="@+id/tvMoveMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/mov_map_or_type"
+            android:textColor="@color/lightGrey"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSetLocation" />
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="250dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:hint="@string/address_hint"
+            android:inputType="text"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMoveMap"
+            tools:text="Sienna 39, Warsaw" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="86dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="22dp"
+            android:background="@drawable/rounded_button"
+            android:text="@string/search"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMoveMap" />
+
+        <Button
+            android:id="@+id/btnConfirmButton"
+            android:layout_width="282dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/singup_button"
+            android:fontFamily="sans-serif"
+            android:text="@string/confirmLocation"
+            android:textColor="@color/permanentWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etAddress"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_button"
+                android:visibility="gone"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="16sp"
+                tools:text="Jarosława Dąbrowskiego 79, Warszawa"
+                tools:textColor="#de000000"
+                app:layout_constraintTop_toBottomOf="@id/etAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

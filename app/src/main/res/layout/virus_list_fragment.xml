@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:backgroundTint="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.VirusListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLocationList"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+        app:layout_constraintTop_toBottomOf="@id/btnClosestLocation"
+        tools:listitem="@layout/report_list_item"/>
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/gradient_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/gradient_white_reversed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvMapTitle"
+        android:layout_width="154dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="@string/reportVirus"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSortBy"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="@string/Sort_by"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBack"/>
+
+    <Button
+        android:id="@+id/btnClosestLocation"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center"
+        android:background="@drawable/basic_button_shape"
+        android:text="@string/closest_location"
+        app:layout_constraintTop_toBottomOf="@id/ivBack"
+        app:layout_constraintStart_toEndOf="@id/tvSortBy" />
+
+    <Button
+        android:id="@+id/btnRecentDate"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:background="@drawable/basic_button_shape"
+        android:text="@string/recent_date"
+        app:layout_constraintTop_toBottomOf="@id/ivBack"
+        app:layout_constraintStart_toEndOf="@id/btnClosestLocation" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="282dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/singup_button"
+        android:fontFamily="sans-serif"
+        android:text="@string/add"
+        android:textColor="@color/permanentWhite"
+        app:layout_constraintTop_toBottomOf="@id/rvLocationList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.accenture.pandemic.fighters.fragments.SplashScreenFragment"
+        android:label="splash_fragment"
+        tools:layout="@layout/splash_fragment" >
+        <action
+            android:id="@+id/action_splashFragment2_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationScreenFragment"
+        android:name="com.accenture.pandemic.fighters.fragments.RegistrationScreenFragment"
+        android:label="registration_screen_fragment"
+        tools:layout="@layout/registration_screen_fragment" >
+        <action
+            android:id="@+id/action_registrationScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registrationScreenFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.accenture.pandemic.fighters.fragments.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registrationScreenFragment"
+            app:destination="@id/registrationScreenFragment"
+            app:popUpTo="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.accenture.pandemic.fighters.fragments.MapFragment"
+        android:label="map_fragment"
+        tools:layout="@layout/map_fragment" >
+        <action
+            android:id="@+id/action_mapFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_filtersFragment"
+            app:destination="@id/filtersFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_virusListFragment"
+            app:destination="@id/virusListFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_reportVirusFragment"
+            app:destination="@id/reportVirusFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_mapFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportVirusFragment"
+        android:name="com.accenture.pandemic.fighters.fragments.ReportVirusFragment"
+        android:label="report_virus_fragment"
+        tools:layout="@layout/report_virus_fragment" >
+        <action
+            android:id="@+id/action_reportVirusFragment_to_editVirusLocationFragment"
+            app:destination="@id/editVirusLocationFragment"
+            app:popUpTo="@id/reportVirusFragment" />
+        <argument
+            android:name="currentLocation"
+            app:argType="com.google.android.gms.maps.model.LatLng"
+            app:nullable="true" />
+        <argument
+            android:name="nearbyLocations"
+            app:argType="com.accenture.pandemic.fighters.Models.Fields[]"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_reportVirusFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filtersFragment"
+        android:name="com.accenture.pandemic.fighters.fragments.FiltersFragment"
+        android:label="filters_fragment"
+        tools:layout="@layout/filters_fragment" >
+        <action
+            android:id="@+id/action_filtersFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_filtersFragment_to_datePickerFragment"
+            app:destination="@id/datePickerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.accenture.pandemic.fighters.fragments.NotificationsFragment"
+        android:label="notifications_fragment"
+        tools:layout="@layout/notifications_fragment" >
+        <argument
+            android:name="currentLocation"
+            app:argType="com.google.android.gms.maps.model.LatLng"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_notificationsFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editVirusLocationFragment"
+        android:name="com.accenture.pandemic.fighters.fragments.EditVirusLocationFragment"
+        android:label="edit_virus_location_fragment"
+        tools:layout="@layout/edit_virus_location_fragment" >
+        <argument
+            android:name="virusLocation"
+            app:argType="com.google.android.gms.maps.model.LatLng"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_editVirusLocationFragment_to_reportVirusFragment"
+            app:destination="@id/reportVirusFragment"
+            app:popUpTo="@id/mapFragment" />
+        <argument
+            android:name="nearbyLocations"
+            app:argType="com.accenture.pandemic.fighters.Models.Fields[]"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/virusListFragment"
+        android:name="com.accenture.pandemic.fighters.fragments.VirusListFragment"
+        android:label="virus_list_fragment"
+        tools:layout="@layout/virus_list_fragment" >
+        <action
+            android:id="@+id/action_virusListFragment_to_reportVirusFragment"
+            app:destination="@id/reportVirusFragment" />
+        <argument
+            android:name="nearbyLocations"
+            app:argType="com.accenture.pandemic.fighters.Models.Fields[]"
+            app:nullable="true" />
+        <argument
+            android:name="currentLocation"
+            app:argType="com.google.android.gms.maps.model.LatLng"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_virusListFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/datePickerFragment"
+        android:name="com.accenture.pandemic.fighters.fragments.DatePickerFragment"
+        android:label="date_picker_fragment"
+        tools:layout="@layout/date_picker_fragment" >
+        <action
+            android:id="@+id/action_datePickerFragment_to_filtersFragment"
+            app:destination="@id/filtersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.accenture.pandemic.fighters.fragments.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+</navigation>

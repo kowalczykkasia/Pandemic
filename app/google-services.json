@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "678109535306",
+    "firebase_url": "https://pandemicfighters.firebaseio.com",
+    "project_id": "pandemicfighters",
+    "storage_bucket": "pandemicfighters.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678109535306:android:6bb0593104d29348575ab3",
+        "android_client_info": {
+          "package_name": "com.accenture.pandemic.fighters"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678109535306-reun5d3ahv9j2lmuarptd59tqd5lq6g2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.accenture.pandemic.fighters",
+            "certificate_hash": "8603e96770b5d25341e9ddf1136853159d43b95b"
+          }
+        },
+        {
+          "client_id": "678109535306-etue56vefptl2cj2f33j5ab1ddll7gt1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGbUaef_iOxIb_he0HZAQAPCYWQlf6HOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678109535306-etue56vefptl2cj2f33j5ab1ddll7gt1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "678109535306-qfn0tdm6eul5659eu0473e6arlcr2km2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.accenture.pandemic-fighters"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

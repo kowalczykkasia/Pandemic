@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorWhite">#333333</color>
+    <color name="colorButtons">#3796F4</color>
+    <color name="backgroundColor">#50000000</color>
+    <color name="locationRadiusTextColor">#FF4E69</color>
+    <color name="yellowButtonsColor">#FFCC00</color>
+    <color name="redButtonColor">#FF2D54</color>
+    <color name="colorBlack">#ffffff</color>
+    <color name="lightGrey">#C6C6C6</color>
+    <color name="grey">#DDDDDD</color>
+    <color name="permanentWhite">#ffffff</color>
+    <color name="border">#fffeee</color>
+    <color name="borderButtons">#FBF6F6</color>
+    <color name="darkGrey">#eeeeee</color>
+    <color name="backgroundPopup">#626262</color>
+</resources>

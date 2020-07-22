@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MapFragment">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mvMap"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/gradient_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMapTitle"
+        android:layout_width="154dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="@string/Where_is_the_virus"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/ivProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/ic_person_black_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvMapTitle"
+        app:layout_constraintStart_toEndOf="@id/ivBack"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/ivCurrentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_near_me_black"
+        app:layout_constraintEnd_toStartOf="@id/ivWorld"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivWorld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/ic_world"
+        app:layout_constraintEnd_toStartOf="@id/ivFilters"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivFilters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/ic_filters"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRadius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="@color/locationRadiusTextColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBack"
+        android:text="@string/defaultRadiusOnMap" />
+
+
+    <Button
+        android:id="@+id/btnNotifications"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="54dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/notifications_button_shape"
+        android:text="@string/notifications"
+        android:textAllCaps="false"
+        android:paddingStart="15dp"
+        android:paddingEnd="10dp"
+        android:drawableStart="@drawable/ic_notification"
+        android:textColor="@color/permanentWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnReportVirus"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="54dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/report_virus_button_shape"
+        android:text="@string/reportVirus"
+        android:drawableStart="@drawable/ic_report"
+        android:textAllCaps="false"
+        android:textColor="@color/permanentWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
